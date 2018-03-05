@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{metroniclayout}">
+
+<head>
+    <title th:text="#{screen.success.header}"></title>
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
+    <style>
+        .login-success-header {
+            padding: 20px;
+            margin-top: 80px; }
+
+        .login-sucess {
+            padding: 20px;
+            margin-top: 10px; }
+        
+
+        .login-sucess h1,
+        .login-sucess p {
+            color: gray; }
+
+        .login-sucess h1 {
+            font-size: 42px;
+            line-height: 50px;
+            margin-bottom: 15px;
+            font-weight: 300; }
+        .login-sucess p {
+            font-size: 14px; }
+
+    </style>
+</head>
+
+<body id="cas" class="pagebg">
+<div layout:fragment="content">
+    <!--<div class="alert alert-success">-->
+        <!--<h2 th:utext="#{screen.success.header}"/>-->
+        <!--<p th:utext="#{screen.success.success(${principal.id})}"/>-->
+        <!--<br>-->
+        <!--<p th:utext="#{screen.success.security}"/>-->
+    <!--</div>-->
+    <!--<div th:replace="fragments/cas-resources-list"/>-->
+    <div class="container">
+        <div class="row">
+            <div class="m-login__logo login-success-header">
+                <a href="#">
+                    <img th:src="@{/images/logo-1.png}">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 login-sucess">
+                <h1 th:utext="#{screen.success.header}"></h1>
+                <p th:utext="#{screen.success.success(${principal.id})}"></p>
+                <br>
+                <p th:utext="#{screen.success.security}"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

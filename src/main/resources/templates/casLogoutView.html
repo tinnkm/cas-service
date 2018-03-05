@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{metroniclayout}">
+
+<head>
+    <title th:text="#{screen.logout.header}"></title>
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
+    <style>
+        .logout-header {
+            padding: 20px;
+            margin-top: 80px; }
+
+        .logout {
+            padding: 20px;
+            margin-top: 10px; }
+
+
+        .logout h1,
+        .logout p {
+            color: gray; }
+
+        .logout h1 {
+            font-size: 42px;
+            line-height: 50px;
+            margin-bottom: 15px;
+            font-weight: 300; }
+        .logout p {
+            font-size: 14px; }
+
+    </style>
+</head>
+
+<body id="cas" class="pagebg">
+<div layout:fragment="content">
+      <!--<div class="alert alert-success">-->
+          <!--<h2 th:utext="#{screen.logout.header}"/>-->
+          <!--<p th:utext="#{screen.logout.success}"/>-->
+          <!--<p th:utext="#{screen.logout.security}" />-->
+      <!--</div>-->
+    <div class="container">
+        <div class="row">
+            <div class="m-login__logo logout-header">
+                <a href="#">
+                    <img th:src="@{/images/logo-1.png}">
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 logout">
+                <h1 th:utext="#{screen.logout.header}"></h1>
+                <p th:utext="#{screen.logout.success}"></p>
+                <br>
+                <p th:utext="#{screen.logout.security}"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>

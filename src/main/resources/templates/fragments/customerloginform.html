@@ -210,6 +210,7 @@
         }
         var handleSignInFormSubmit = function() {
             $('#fm1,#reset-password').submit(function(e) {
+                $("#password").val(md5($("#password").val()));
                 var form = $(this).closest('form');
                 form.validate({
                     rules: {

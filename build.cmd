@@ -56,7 +56,7 @@
 @goto:eof
 
 :bootrun
-    call %MAVEN_CMD% clean package spring-boot:run -T 5 %1 %2 %3
+    call %MAVEN_CMD% clean package spring-boot:run -X -T 5 %1 %2 %3
     exit /B %ERRORLEVEL%
 @goto:eof
 

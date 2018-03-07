@@ -30,7 +30,6 @@
             <binding property="password" required="true"/>
         </binder>
         <transition on="submit" bind="true" validate="true" to="realSubmit" history="invalidate"/>
-        <transition on="resetPassword" bind="true" validate="true" to="viewLoginForm" history="invalidate"/>
     </view-state>
 
     <action-state id="realSubmit">
